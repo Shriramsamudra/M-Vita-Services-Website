@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-Vita Services | Your Partner in Financial Well-being</title>
+    <!-- Use Tailwind CSS for a modern, responsive design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use a modern, sans-serif font like Poppins from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7fafc; /* Very light gray background */
+        }
+        /* Define a custom color for the primary blue from the logo */
+        .m-vita-blue {
+            --tw-bg-opacity: 1;
+            background-color: #1E65AE;
+            --tw-text-opacity: 1;
+            color: #1E65AE;
+        }
+        .m-vita-blue-text {
+            color: #1E65AE;
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #1E65AE;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+        }
+        .custom-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .bg-hero {
+            background-image: url('https://images.unsplash.com/photo-1549420556-9a57158756ca?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white custom-shadow fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#home" class="flex items-center">
+                <img src="http://googleusercontent.com/file_content/1" alt="M-Vita Services Logo" class="h-10">
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#home" class="m-vita-blue-text font-medium hover:text-gray-900 transition-colors duration-300">Home</a>
+                <a href="#about" class="m-vita-blue-text font-medium hover:text-gray-900 transition-colors duration-300">About Us</a>
+                <div class="relative group">
+                    <button class="m-vita-blue-text font-medium hover:text-gray-900 transition-colors duration-300 focus:outline-none">
+                        Services <i class="fas fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div class="absolute hidden group-hover:block bg-white custom-shadow rounded-lg mt-2 py-2 w-48 transition-all duration-300 ease-in-out">
+                        <a href="#mutual-funds" class="block px-4 py-2 m-vita-blue-text hover:bg-gray-100">Mutual Funds</a>
+                        <a href="#life-insurance" class="block px-4 py-2 m-vita-blue-text hover:bg-gray-100">Life Insurance</a>
+                        <a href="#general-insurance" class="block px-4 py-2 m-vita-blue-text hover:bg-gray-100">General Insurance</a>
+                        <a href="#bonds" class="block px-4 py-2 m-vita-blue-text hover:bg-gray-100">Bonds & Fixed Income</a>
+                        <a href="#pension" class="block px-4 py-2 m-vita-blue-text hover:bg-gray-100">Pension Planning</a>
+                    </div>
+                </div>
+                <a href="#knowledge-center" class="m-vita-blue-text font-medium hover:text-gray-900 transition-colors duration-300">Knowledge Center</a>
+                <a href="#contact" class="m-vita-blue-text font-medium hover:text-gray-900 transition-colors duration-300">Contact Us</a>
+                <a href="#" class="px-5 py-2 rounded-full m-vita-blue bg-white border border-solid border-m-vita-blue-text font-medium hover:bg-m-vita-blue-text hover:text-white transition-all duration-300 ease-in-out">Client Portal</a>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white custom-shadow py-2 text-center">
+            <a href="#home" class="block px-4 py-2 m-vita-blue-text hover:bg-gray-100">Home</a>
+            <a href="#about" class="block px-4 py-2 m-vita-blue-text hover:bg-gray-100">About Us</a>
+            <a href="#services" class="block px-4 py-2 m-vita-blue-text hover:bg-gray-100">Services</a>
+            <a href="#knowledge-center" class="block px-4 py-2 m-vita-blue-text hover:bg-gray-100">Knowledge Center</a>
+            <a href="#contact" class="block px-4 py-2 m-vita-blue-text hover:bg-gray-100">Contact Us</a>
+            <a href="#" class="block px-4 py-2 m-vita-blue-text hover:bg-gray-100">Client Portal</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+
+        <!-- Homepage Hero Section -->
+        <section id="home" class="bg-hero bg-opacity-70 text-white min-h-[80vh] flex items-center justify-center text-center px-4 py-16">
+            <div class="bg-black bg-opacity-50 p-8 md:p-12 rounded-lg max-w-4xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Your Partner in Financial Well-being</h1>
+                <p class="text-lg md:text-xl font-light mb-8">
+                    Empowering individuals and families to achieve their financial goals through expert advice and personalized solutions.
+                </p>
+                <a href="#contact" class="px-8 py-4 rounded-full bg-m-vita-blue-text text-white font-semibold text-lg hover:bg-blue-700 transition-colors duration-300 custom-shadow">
+                    Schedule a Free Consultation
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section id="services-overview" class="py-16 md:py-24">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold m-vita-blue-text mb-4">Our Comprehensive Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+                    We offer a full spectrum of financial services to help you secure your future.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <a href="#mutual-funds" class="bg-white p-8 rounded-lg custom-shadow hover:scale-105 transition-transform duration-300">
+                        <div class="text-4xl m-vita-blue-text mb-4"><i class="fas fa-chart-line"></i></div>
+                        <h3 class="text-xl font-semibold mb-2">Mutual Funds</h3>
+                        <p class="text-gray-600">Expert guidance on SIPs, lump-sum investments, and portfolio management.</p>
+                    </a>
+                    <!-- Service Card 2 -->
+                    <a href="#life-insurance" class="bg-white p-8 rounded-lg custom-shadow hover:scale-105 transition-transform duration-300">
+                        <div class="text-4xl m-vita-blue-text mb-4"><i class="fas fa-heartbeat"></i></div>
+                        <h3 class="text-xl font-semibold mb-2">Life Insurance</h3>
+                        <p class="text-gray-600">Protect your family's future with the right insurance policies.</p>
+                    </a>
+                    <!-- Service Card 3 -->
+                    <a href="#general-insurance" class="bg-white p-8 rounded-lg custom-shadow hover:scale-105 transition-transform duration-300">
+                        <div class="text-4xl m-vita-blue-text mb-4"><i class="fas fa-car-side"></i></div>
+                        <h3 class="text-xl font-semibold mb-2">General Insurance</h3>
+                        <p class="text-gray-600">Secure your assets with health, motor, and corporate insurance.</p>
+                    </a>
+                    <!-- Service Card 4 -->
+                    <a href="#bonds" class="bg-white p-8 rounded-lg custom-shadow hover:scale-105 transition-transform duration-300">
+                        <div class="text-4xl m-vita-blue-text mb-4"><i class="fas fa-handshake"></i></div>
+                        <h3 class="text-xl font-semibold mb-2">Bonds & Fixed Income</h3>
+                        <p class="text-gray-600">Explore stable investment opportunities for consistent returns.</p>
+                    </a>
+                    <!-- Service Card 5 -->
+                    <a href="#pension" class="bg-white p-8 rounded-lg custom-shadow hover:scale-105 transition-transform duration-300">
+                        <div class="text-4xl m-vita-blue-text mb-4"><i class="fas fa-piggy-bank"></i></div>
+                        <h3 class="text-xl font-semibold mb-2">Pension Planning</h3>
+                        <p class="text-gray-600">Plan for a worry-free retirement with our tailored solutions.</p>
+                    </a>
+                    <!-- Service Card 6 -->
+                    <a href="#knowledge-center" class="bg-white p-8 rounded-lg custom-shadow hover:scale-105 transition-transform duration-300">
+                        <div class="text-4xl m-vita-blue-text mb-4"><i class="fas fa-book"></i></div>
+                        <h3 class="text-xl font-semibold mb-2">Financial Literacy</h3>
+                        <p class="text-gray-600">Access our blog and calculators to enhance your financial knowledge.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About the Founder -->
+        <section id="founder" class="py-16 md:py-24 bg-m-vita-blue text-white">
+            <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
+                <div class="w-full lg:w-1/3 flex justify-center">
+                    <img src="http://googleusercontent.com/file_content/0" alt="Shriram Samudra, Founder of M-Vita Services" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover custom-shadow">
+                </div>
+                <div class="w-full lg:w-2/3 text-center lg:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Meet Our Founder, Shriram Samudra</h2>
+                    <p class="text-lg font-light mb-6">
+                        With over two decades of experience in the financial services industry, Shriram Samudra founded M-Vita Services with a vision to make expert financial advice accessible to everyone. His philosophy is rooted in a client-first approach, focusing on long-term wealth creation and protection through ethical and transparent practices.
+                    </p>
+                    <a href="#about" class="inline-block px-6 py-3 rounded-full bg-white text-m-vita-blue-text font-semibold hover:bg-gray-100 transition-colors duration-300 custom-shadow">
+                        Read Full Profile
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Testimonials -->
+        <section id="testimonials" class="py-16 md:py-24">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold m-vita-blue-text mb-12">What Our Clients Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-6 rounded-lg custom-shadow">
+                        <p class="italic text-gray-600 mb-4">"M-Vita Services provided a clear and actionable plan for my family's future. We feel secure knowing our investments are in good hands."</p>
+                        <div class="font-semibold text-gray-900">- A satisfied Family</div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-6 rounded-lg custom-shadow">
+                        <p class="italic text-gray-600 mb-4">"Shriram's advice on retirement planning has been invaluable. I'm now confidently looking forward to my post-work life."</p>
+                        <div class="font-semibold text-gray-900">- A Retiree Client</div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white p-6 rounded-lg custom-shadow">
+                        <p class="italic text-gray-600 mb-4">"The team at M-Vita Services is highly professional and transparent. I trust them completely with my wealth creation goals."</p>
+                        <div class="font-semibold text-gray-900">- A High-Net-Worth Individual</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Posts Section -->
+        <section id="blog-preview" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold m-vita-blue-text mb-12">Latest Insights from Our Blog</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Blog Post 1 -->
+                    <div class="bg-white rounded-lg custom-shadow">
+                        <img src="https://images.unsplash.com/photo-1549420556-9a57158756ca?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Financial Planning" class="w-full h-48 object-cover rounded-t-lg">
+                        <div class="p-6 text-left">
+                            <h3 class="text-xl font-semibold mb-2">How to Build a Strong Financial Foundation</h3>
+                            <p class="text-gray-600 mb-4 line-clamp-3">A step-by-step guide to help you start your financial planning journey, from budgeting to investing.</p>
+                            <a href="#" class="m-vita-blue-text font-medium hover:underline">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                    <!-- Blog Post 2 -->
+                    <div class="bg-white rounded-lg custom-shadow">
+                        <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Investment strategies" class="w-full h-48 object-cover rounded-t-lg">
+                        <div class="p-6 text-left">
+                            <h3 class="text-xl font-semibold mb-2">Understanding SIPs vs. Lump-sum Investments</h3>
+                            <p class="text-gray-600 mb-4 line-clamp-3">We break down the pros and cons of Systematic Investment Plans and one-time investments.</p>
+                            <a href="#" class="m-vita-blue-text font-medium hover:underline">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                    <!-- Blog Post 3 -->
+                    <div class="bg-white rounded-lg custom-shadow">
+                        <img src="https://images.unsplash.com/photo-1581452146039-4467d0224d08?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Insurance awareness" class="w-full h-48 object-cover rounded-t-lg">
+                        <div class="p-6 text-left">
+                            <h3 class="text-xl font-semibold mb-2">Why Health Insurance is a Must-Have</h3>
+                            <p class="text-gray-600 mb-4 line-clamp-3">Learn about the importance of health insurance and how to choose the right plan for your family.</p>
+                            <a href="#" class="m-vita-blue-text font-medium hover:underline">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculators Quick Access -->
+        <section id="calculators-quick-access" class="py-16 md:py-24">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold m-vita-blue-text mb-8">Financial Calculators</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+                    Use our interactive tools to plan and manage your finances.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    <a href="#calculators" class="flex flex-col items-center p-4 bg-white rounded-lg custom-shadow hover:bg-gray-100 transition-colors duration-300">
+                        <div class="text-3xl m-vita-blue-text mb-2"><i class="fas fa-calculator"></i></div>
+                        <span class="text-sm font-semibold">SIP Calculator</span>
+                    </a>
+                    <a href="#calculators" class="flex flex-col items-center p-4 bg-white rounded-lg custom-shadow hover:bg-gray-100 transition-colors duration-300">
+                        <div class="text-3xl m-vita-blue-text mb-2"><i class="fas fa-user-friends"></i></div>
+                        <span class="text-sm font-semibold">Retirement Calculator</span>
+                    </a>
+                    <a href="#calculators" class="flex flex-col items-center p-4 bg-white rounded-lg custom-shadow hover:bg-gray-100 transition-colors duration-300">
+                        <div class="text-3xl m-vita-blue-text mb-2"><i class="fas fa-shield-alt"></i></div>
+                        <span class="text-sm font-semibold">Premium Calculator</span>
+                    </a>
+                    <a href="#calculators" class="flex flex-col items-center p-4 bg-white rounded-lg custom-shadow hover:bg-gray-100 transition-colors duration-300">
+                        <div class="text-3xl m-vita-blue-text mb-2"><i class="fas fa-bullseye"></i></div>
+                        <span class="text-sm font-semibold">Goal Planning</span>
+                    </a>
+                    <a href="#calculators" class="flex flex-col items-center p-4 bg-white rounded-lg custom-shadow hover:bg-gray-100 transition-colors duration-300">
+                        <div class="text-3xl m-vita-blue-text mb-2"><i class="fas fa-money-check-alt"></i></div>
+                        <span class="text-sm font-semibold">EMI Calculator</span>
+                    </a>
+                    <a href="#knowledge-center" class="flex flex-col items-center p-4 bg-m-vita-blue-text text-white rounded-lg custom-shadow hover:bg-blue-700 transition-colors duration-300">
+                        <div class="text-3xl text-white mb-2"><i class="fas fa-external-link-alt"></i></div>
+                        <span class="text-sm font-semibold">View All</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full About Us Section -->
+        <section id="about" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold m-vita-blue-text text-center mb-12">About M-Vita Services</h2>
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="w-full lg:w-1/3 flex justify-center">
+                        <img src="http://googleusercontent.com/file_content/0" alt="Shriram Samudra" class="w-full md:w-2/3 lg:w-full max-w-sm rounded-lg custom-shadow">
+                    </div>
+                    <div class="w-full lg:w-2/3 text-center lg:text-left">
+                        <h3 class="text-2xl font-bold m-vita-blue-text mb-4">Founder's Profile: Shriram Samudra</h3>
+                        <p class="text-gray-600 mb-6">Shriram Samudra, a seasoned financial expert with a career spanning over 20 years, is the driving force behind M-Vita Services. His journey began with a simple belief: that everyone, regardless of their financial background, deserves access to sound, unbiased, and ethical financial advice. With a deep understanding of market dynamics and a commitment to continuous learning, Shriram has helped hundreds of clients navigate complex financial landscapes and build sustainable wealth. His expertise is not just in numbers but in understanding people's dreams and goals, and crafting personalized strategies to achieve them.</p>
+
+                        <h3 class="text-2xl font-bold m-vita-blue-text mt-8 mb-4">Our Mission & Vision</h3>
+                        <p class="text-gray-600 mb-6">
+                            Our mission is to empower individuals and families to make informed financial decisions through comprehensive, transparent, and personalized advisory services. We envision a future where financial security is not a privilege but a reality for everyone, achieved through trusted partnership and expert guidance.
+                        </p>
+
+                        <h3 class="text-2xl font-bold m-vita-blue-text mt-8 mb-4">Why Choose M-Vita Services?</h3>
+                        <ul class="text-gray-600 space-y-2 list-disc list-inside">
+                            <li>Personalized Approach: We create customized financial plans tailored to your unique goals and risk tolerance.</li>
+                            <li>Comprehensive Solutions: From mutual funds and insurance to retirement planning, we cover all your financial needs under one roof.</li>
+                            <li>Ethical Practices: Our advice is always in your best interest, built on a foundation of trust and transparency.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section (Main) -->
+        <section id="services" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold m-vita-blue-text text-center mb-12">Our Financial Solutions</h2>
+                <p class="text-center text-xl text-gray-600 max-w-3xl mx-auto mb-12">Explore our full range of services designed to help you plan, grow, and protect your wealth at every stage of life.</p>
+                
+                <!-- Mutual Funds Sub-page -->
+                <div id="mutual-funds" class="bg-white p-8 rounded-lg custom-shadow mb-12">
+                    <h3 class="text-2xl font-bold m-vita-blue-text mb-4">Mutual Funds</h3>
+                    <p class="text-gray-600 mb-4">
+                        Investing in mutual funds is a powerful way to achieve your long-term financial goals. We offer expert guidance on Systematic Investment Plans (SIPs) and lump-sum investments across various categories, including Equity, Debt, and Hybrid funds. Our risk assessment process helps you choose the right funds that align with your financial objectives and risk profile.
+                    </p>
+                    <a href="#contact" class="inline-block px-6 py-3 rounded-full bg-m-vita-blue-text text-white font-semibold hover:bg-blue-700 transition-colors duration-300">
+                        Get Started with Mutual Funds
+                    </a>
+                </div>
+
+                <!-- Life Insurance Sub-page -->
+                <div id="life-insurance" class="bg-white p-8 rounded-lg custom-shadow mb-12">
+                    <h3 class="text-2xl font-bold m-vita-blue-text mb-4">Life Insurance</h3>
+                    <p class="text-gray-600 mb-4">
+                        Secure your family's future with a comprehensive life insurance plan. We help you navigate options like Term Plans, Endowment Plans, and Unit-Linked Insurance Plans (ULIPs) to find a policy that provides maximum coverage and peace of mind.
+                    </p>
+                    <a href="#contact" class="inline-block px-6 py-3 rounded-full bg-m-vita-blue-text text-white font-semibold hover:bg-blue-700 transition-colors duration-300">
+                        Get a Quote
+                    </a>
+                </div>
+
+                <!-- General Insurance Sub-page -->
+                <div id="general-insurance" class="bg-white p-8 rounded-lg custom-shadow mb-12">
+                    <h3 class="text-2xl font-bold m-vita-blue-text mb-4">General Insurance</h3>
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="w-full md:w-1/2">
+                            <h4 class="text-xl font-semibold m-vita-blue-text mb-2">Personal Insurance</h4>
+                            <ul class="text-gray-600 space-y-1 list-disc list-inside">
+                                <li>Health Insurance: Protect yourself and your family from medical expenses.</li>
+                                <li>Motor Insurance: Comprehensive coverage for your vehicle.</li>
+                                <li>Home Insurance: Safeguard your most valuable asset.</li>
+                            </ul>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <h4 class="text-xl font-semibold m-vita-blue-text mb-2">Corporate Insurance</h4>
+                            <ul class="text-gray-600 space-y-1 list-disc list-inside">
+                                <li>Group Health Insurance: For the well-being of your employees.</li>
+                                <li>Public Liability Insurance: Protection against third-party claims.</li>
+                                <li>Directors & Officers Insurance: Coverage for company leadership.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#contact" class="mt-6 inline-block px-6 py-3 rounded-full bg-m-vita-blue-text text-white font-semibold hover:bg-blue-700 transition-colors duration-300">
+                        Learn More
+                    </a>
+                </div>
+
+                <!-- Bonds & Fixed Income Sub-page -->
+                <div id="bonds" class="bg-white p-8 rounded-lg custom-shadow mb-12">
+                    <h3 class="text-2xl font-bold m-vita-blue-text mb-4">Bonds & Fixed Income</h3>
+                    <p class="text-gray-600 mb-4">
+                        For investors seeking stable, predictable returns, our portfolio of fixed-income instruments, including corporate bonds and government securities, offers a secure way to diversify your investments.
+                    </p>
+                    <a href="#contact" class="inline-block px-6 py-3 rounded-full bg-m-vita-blue-text text-white font-semibold hover:bg-blue-700 transition-colors duration-300">
+                        Explore Fixed Income Options
+                    </a>
+                </div>
+
+                <!-- Pension & Retirement Planning Sub-page -->
+                <div id="pension" class="bg-white p-8 rounded-lg custom-shadow">
+                    <h3 class="text-2xl font-bold m-vita-blue-text mb-4">Pension & Retirement Planning</h3>
+                    <p class="text-gray-600 mb-4">
+                        It's never too early to start planning for retirement. We guide you through various options, including the National Pension System (NPS), to build a robust corpus that ensures a comfortable and financially independent retirement.
+                    </p>
+                    <a href="#contact" class="inline-block px-6 py-3 rounded-full bg-m-vita-blue-text text-white font-semibold hover:bg-blue-700 transition-colors duration-300">
+                        Start Planning Your Retirement
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Knowledge Center Section -->
+        <section id="knowledge-center" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold m-vita-blue-text text-center mb-12">Knowledge Center</h2>
+                
+                <!-- Financial Calculators -->
+                <div id="calculators" class="bg-gray-100 p-8 rounded-lg custom-shadow mb-12 text-center">
+                    <h3 class="text-2xl font-bold m-vita-blue-text mb-4">Financial Calculators</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white p-6 rounded-lg custom-shadow">
+                            <h4 class="text-xl font-semibold mb-2">SIP Calculator</h4>
+                            <p class="text-gray-600">Estimate the wealth you can create through a Systematic Investment Plan.</p>
+                            <a href="#" class="mt-4 inline-block px-4 py-2 rounded-full bg-m-vita-blue-text text-white text-sm hover:bg-blue-700 transition-colors duration-300">Use Calculator</a>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg custom-shadow">
+                            <h4 class="text-xl font-semibold mb-2">Retirement Planning Calculator</h4>
+                            <p class="text-gray-600">Calculate how much you need to save for a comfortable retirement.</p>
+                            <a href="#" class="mt-4 inline-block px-4 py-2 rounded-full bg-m-vita-blue-text text-white text-sm hover:bg-blue-700 transition-colors duration-300">Use Calculator</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Gallery -->
+                <div class="bg-gray-100 p-8 rounded-lg custom-shadow mb-12 text-center">
+                    <h3 class="text-2xl font-bold m-vita-blue-text mb-4">Video Gallery</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="w-full aspect-video rounded-lg overflow-hidden custom-shadow">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+                        </div>
+                        <div class="w-full aspect-video rounded-lg overflow-hidden custom-shadow">
+                            <iframe src="https://www.youtube.com/embed/A3yCcXgbKrE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+                        </div>
+                        <div class="w-full aspect-video rounded-lg overflow-hidden custom-shadow">
+                            <iframe src="https://www.youtube.com/embed/Xq_qM5eR5jQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo Gallery -->
+                <div class="bg-gray-100 p-8 rounded-lg custom-shadow text-center">
+                    <h3 class="text-2xl font-bold m-vita-blue-text mb-4">Photo Gallery</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <img src="https://placehold.co/400x300/a2d3e9/ffffff?text=Event+1" alt="Event photo 1" class="w-full h-auto rounded-lg custom-shadow">
+                        <img src="https://placehold.co/400x300/a2d3e9/ffffff?text=Seminar" alt="Seminar photo" class="w-full h-auto rounded-lg custom-shadow">
+                        <img src="https://placehold.co/400x300/a2d3e9/ffffff?text=Client+Meeting" alt="Client meeting photo" class="w-full h-auto rounded-lg custom-shadow">
+                        <img src="https://placehold.co/400x300/a2d3e9/ffffff?text=Team+Photo" alt="Team photo" class="w-full h-auto rounded-lg custom-shadow">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Us & Appointment Section -->
+        <section id="contact" class="py-16 md:py-24 bg-m-vita-blue text-white">
+            <div class="container mx-auto px-4 text-center lg:text-left">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                        <p class="text-lg font-light mb-8">
+                            Fill out the form below to send us an inquiry or schedule a free consultation.
+                        </p>
+                        <form id="contact-form" class="space-y-4">
+                            <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg border-2 border-transparent focus:border-white focus:outline-none bg-white text-gray-800 transition-colors duration-300" required>
+                            <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg border-2 border-transparent focus:border-white focus:outline-none bg-white text-gray-800 transition-colors duration-300" required>
+                            <textarea placeholder="Your Message" rows="5" class="w-full p-3 rounded-lg border-2 border-transparent focus:border-white focus:outline-none bg-white text-gray-800 transition-colors duration-300" required></textarea>
+                            <button type="submit" class="w-full px-6 py-3 rounded-full bg-white text-m-vita-blue-text font-semibold hover:bg-gray-100 transition-colors duration-300 custom-shadow">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info & Map -->
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Contact Information</h2>
+                        <div class="space-y-4">
+                            <p class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-2xl mr-4 mt-1"></i>
+                                <span>123, Financial Hub, Wealthy Street, Mumbai, Maharashtra 400001, India</span>
+                            </p>
+                            <p class="flex items-center">
+                                <i class="fas fa-phone-alt text-2xl mr-4"></i>
+                                <a href="tel:+919876543210" class="hover:underline">+91 98765 43210</a>
+                            </p>
+                            <p class="flex items-center">
+                                <i class="fas fa-envelope text-2xl mr-4"></i>
+                                <a href="mailto:info@mvitaservices.com" class="hover:underline">info@mvitaservices.com</a>
+                            </p>
+                        </div>
+                        <div class="mt-8">
+                            <h3 class="text-2xl font-bold mb-4">Schedule an Appointment</h3>
+                            <p class="text-lg font-light mb-4">
+                                Book a convenient time with Shriram Samudra to discuss your financial goals.
+                            </p>
+                            <!-- Placeholder for Calendly or similar scheduling tool -->
+                            <a href="https://calendly.com/" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 rounded-full bg-white text-m-vita-blue-text font-semibold hover:bg-gray-100 transition-colors duration-300 custom-shadow">
+                                Book Your Consultation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white text-gray-600 py-12">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="mb-4 md:mb-0">
+                <img src="http://googleusercontent.com/file_content/1" alt="M-Vita Services Logo" class="h-8 mx-auto md:mx-0">
+                <p class="mt-2 text-sm">&copy; 2024 M-Vita Services. All Rights Reserved.</p>
+            </div>
+            <div class="flex space-x-6 text-2xl mb-4 md:mb-0">
+                <!-- Social Media Icons -->
+                <a href="#" class="hover:text-m-vita-blue-text transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="hover:text-m-vita-blue-text transition-colors duration-300"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-m-vita-blue-text transition-colors duration-300"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-m-vita-blue-text transition-colors duration-300"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="text-sm">
+                <a href="#" class="hover:underline">Privacy Policy</a> |
+                <a href="#" class="hover:underline">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Message Modal -->
+    <div id="message-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden items-center justify-center">
+        <div class="bg-white p-8 rounded-lg custom-shadow text-center max-w-sm">
+            <h3 class="text-xl font-bold m-vita-blue-text mb-4">Message Sent!</h3>
+            <p class="text-gray-700 mb-6">Thank you for your inquiry. We will get back to you shortly.</p>
+            <button id="close-modal" class="px-6 py-3 rounded-full bg-m-vita-blue-text text-white font-semibold hover:bg-blue-700 transition-colors duration-300">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript for Mobile Menu and Form Submission -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const contactForm = document.getElementById('contact-form');
+            const messageModal = document.getElementById('message-modal');
+            const closeModalButton = document.getElementById('close-modal');
+
+            // Toggle mobile menu visibility
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu on link click
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Handle contact form submission
+            contactForm.addEventListener('submit', (event) => {
+                event.preventDefault(); // Prevent default form submission
+                
+                // Show the modal
+                messageModal.classList.remove('hidden');
+                messageModal.classList.add('flex');
+
+                // Clear the form fields
+                contactForm.reset();
+            });
+
+            // Close the modal
+            closeModalButton.addEventListener('click', () => {
+                messageModal.classList.add('hidden');
+                messageModal.classList.remove('flex');
+            });
+
+            // Optional: Close modal when clicking outside of it
+            messageModal.addEventListener('click', (event) => {
+                if (event.target === messageModal) {
+                    messageModal.classList.add('hidden');
+                    messageModal.classList.remove('flex');
+                }
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
